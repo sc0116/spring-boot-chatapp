@@ -16,7 +16,7 @@ public class Chat {
     @Id
     private String id;
 
-    private String msg;
+    private String message;
 
     private String sender;      //보내는 사람
 
