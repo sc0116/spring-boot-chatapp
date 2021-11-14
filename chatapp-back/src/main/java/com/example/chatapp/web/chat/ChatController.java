@@ -15,11 +15,13 @@ public class ChatController {
 
     private final ChatService chatService;
 
+    @CrossOrigin
     @GetMapping(value = "/sender/{sender}/receiver/{receiver}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Chat> receiveMessage(@PathVariable String sender, @PathVariable String receiver) {
         return chatService.receiveMessage(sender, receiver);
     }
 
+    @CrossOrigin
     @PostMapping("/chat")
     public Mono<Chat> sendMessage(@RequestBody SendMessageRequestDto sendMessageRequestDto) {
         return chatService.sendMessage(sendMessageRequestDto);
