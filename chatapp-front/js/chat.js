@@ -2,6 +2,8 @@
 let username = prompt("아이디를 입력하세요.");
 let roomNumber = prompt("채팅방 번호를 입력하세요.");
 
+document.querySelector("#username").innerHTML = username;
+
 //SSE 연결
 const eventSource = new EventSource(`http://localhost:2700/chat/room/${roomNumber}`)
 
