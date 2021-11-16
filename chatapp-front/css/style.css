@@ -1,6 +1,6 @@
 body{
   height: 100%;
-    background-color: #9bbbd4;
+    background-color: #ffffff;
 }
 .user{
 	border-bottom: 1px solid #716d6d;
@@ -17,10 +17,10 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-	background-color: #9bbbd4 !important;
+	background-color: #ffffff !important;
 	width:100%;
 	padding: 10px;
-	border-bottom: 1px solid #716d6d;
+	border-bottom: 1px solid #dcdcdc;
 }
 .user a:hover{
 text-decoration: none;
@@ -31,7 +31,7 @@ color: #212529;
 }
 
 .chat_section{
-	padding-top: 15px;
+	padding-top: 80px;
     padding-bottom: 40px;
     overflow-y: auto;
 }
@@ -46,9 +46,9 @@ color: #212529;
   width: 92%;
  }
  .received_withd_msg p {
-  background: #ffffff none repeat scroll 0 0;
+  background: #dcdcdc none repeat scroll 0 0;
   border-radius: 6px;
-  color: #556677;
+  color: #000000;
   font-size: 14px;
   margin: 0;
   padding: 5px 10px 5px 12px;
@@ -68,10 +68,10 @@ color: #212529;
 }
 
  .sent_msg p {
-  background: #fef01b none repeat scroll 0 0;
+  background: #335cfc none repeat scroll 0 0;
   border-radius: 6px;
   font-size: 14px;
-  margin: 0; color: #556677;
+  margin: 0; color: #ffffff;
   padding: 5px 10px 5px 12px;
   width:100%;
 }
@@ -99,10 +99,10 @@ color: #212529;
     width: 100%;
 }
 .msg_send_btn {
-  background: #fef01b none repeat scroll 0 0;
+  background: #335cfc none repeat scroll 0 0;
   border: medium none;
-  border-radius: 50%;
-  color: #556677;
+  border-radius: 40%;
+  color: #ffffff;
   cursor: pointer;
   font-size: 15px;
   height: 33px;
