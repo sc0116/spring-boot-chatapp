@@ -22,6 +22,12 @@ public class ChatController {
     }
 
     @CrossOrigin
+    @GetMapping(value = "/chat/room/{roomNumber}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux<Chat> receiveRoomMessage(@PathVariable Integer roomNumber) {
+        return chatService.receiveRoomMessage(roomNumber);
+    }
+
+    @CrossOrigin
     @PostMapping("/chat")
     public Mono<Chat> sendMessage(@RequestBody SendMessageRequestDto sendMessageRequestDto) {
         return chatService.sendMessage(sendMessageRequestDto);

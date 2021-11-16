@@ -14,12 +14,14 @@ public class SendMessageRequestDto {
     private String message;
     private String sender;
     private String receiver;
+    private Integer roomNumber;
 
     public Chat toEntity() {
         return Chat.builder()
                 .message(message)
                 .sender(sender)
                 .receiver(receiver)
+                .roomNumber(roomNumber)
                 .createdDate(LocalDateTime.now())
                 .build();
     }

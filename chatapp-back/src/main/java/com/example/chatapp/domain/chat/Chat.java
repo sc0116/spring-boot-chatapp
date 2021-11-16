@@ -23,13 +23,16 @@ public class Chat {
 
     private String receiver;    //받는 사람
 
+    private Integer roomNumber; //방 번호
+
     private LocalDateTime createdDate;
 
     @Builder
-    public Chat(String message, String sender, String receiver, LocalDateTime createdDate) {
+    public Chat(String message, String sender, String receiver, Integer roomNumber, LocalDateTime createdDate) {
         this.message = message;
         this.sender = sender;
         this.receiver = receiver;
+        this.roomNumber = roomNumber;
         this.createdDate = createdDate;
     }
 }

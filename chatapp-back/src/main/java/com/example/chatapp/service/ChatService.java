@@ -20,6 +20,11 @@ public class ChatService {
                 .subscribeOn(Schedulers.boundedElastic());
     }
 
+    public Flux<Chat> receiveRoomMessage(Integer roomNumber) {
+        return chatRepository.mFindByRoomNumber(roomNumber)
+                .subscribeOn(Schedulers.boundedElastic());
+    }
+
     public Mono<Chat> sendMessage(SendMessageRequestDto sendMessageRequestDto) {
         return chatRepository.save(sendMessageRequestDto.toEntity());
     }
